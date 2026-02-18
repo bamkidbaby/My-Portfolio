@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PETE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+  </head>
+  <body class="relative bg-white min-h-screen text-gray-900 font-mono antialiased overflow-x-hidden">
+
+    <!-- Gradient Mesh Background -->
+<div class="fixed inset-0 -z-10 overflow-hidden">
+
+  <div class="absolute top-[-10%] left-[10%] w-[500px] h-[500px]
+              bg-blue-200 rounded-full blur-3xl opacity-40"></div>
+
+  <div class="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px]
+              bg-purple-200 rounded-full blur-3xl opacity-40"></div>
+
+</div>
+
+
+    <!-- Navbar -->
+    <nav
+      class="bg-white/70 backdrop-blur-md fixed w-full z-40 px-7 py-4 flex items-center justify-between shadow-md"
+    >
+      <a
+        href="#home"
+        class="text-xl font-light text-gray-900 tracking-wide hover:text-blue-500 transition"
+      >
+        PETER BAMIDELE
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 text-gray-700">
+        <li>
+          <a href="#about" class="hover:text-gray-900 transition">ABOUT</a>
+        </li>
+        <li>
+          <a href="#projects" class="hover:text-gray-900 transition"
+            >PROJECTS</a
+          >
+        </li>
+        <li>
+          <a href="#experience" class="hover:text-gray-900 transition">EXPERIENCE</a>
+        </li>
+        <li>
+          <a href="#contact" class="hover:text-gray-900 transition">CONTACT</a>
+        </li>
+      </ul>
+
+      <!-- Mobile Hamburger -->
+      <div class="md:hidden flex items-center">
+        <button id="menu-btn" class="focus:outline-none">
+          <svg
+            id="menu-icon"
+            class="w-6 h-6 text-gray-900 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu (Left Slide) -->
+    <div
+      id="mobile-menu"
+      class="fixed top-0 left-0 w-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-30 flex flex-col pt-20 px-6 py-3 space-y-6"
+    >
+      <a
+        href="#about"
+        class="text-gray-700 hover:text-gray-900 transition text-base font-medium"
+        >ABOUT</a
+      >
+      <a
+        href="#projects"
+        class="text-gray-700 hover:text-gray-900 transition text-base font-medium"
+        >PROJECTS</a
+      >
+      <a
+        href="#experience"
+        class="text-gray-700 hover:text-gray-900 transition text-base font-medium"
+        >EXPERIENCE</a
+      >
+      <a
+        href="#contact"
+        class="text-gray-700 hover:text-gray-900 transition text-base font-medium"
+        >CONTACT</a
+      >
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="flex flex-col justify-center px-6 pt-24 md:px-20 space-y-6 md:min-h-screen"
+    >
+      <!-- Section Label -->
+      <span class="text-sm md:text-sm text-gray-500 uppercase tracking-widest">
+        Full-Stack Developer
+      </span>
+
+      <!-- Main Heading -->
+      <h1 class="text-4xl md:text-6xl font-bold text-blue-600 leading-tight">
+        Web apps that work,<br />for real.
+      </h1>
+
+      <!-- Description -->
+      <p class="max-w-2xl text-gray-700 text-base md:text-lg leading-relaxed">
+        I build full-stack web apps that are reliable, fast, and easy to use. My
+        focus is clean code and seamless user experiences.
+      </p>
+
+      <!-- Social & Resume Buttons -->
+      <div class="flex items-center gap-4 mt-4">
+        <a
+          href="https://github.com/bamkidbaby"
+          target="_blank"
+          class="text-gray-700 hover:text-blue-600 text-2xl"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/peter-bamidele"
+          target="_blank"
+          class="text-gray-700 hover:text-blue-600 text-2xl"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          href="mailto:youremail@example.com"
+          class="text-gray-700 hover:text-blue-600 text-2xl"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a
+          href="/resume.pdf"
+          download
+          class="flex items-center border border-gray-700 hover:border-blue-600 text-gray-700 hover:text-blue-600 px-4 py-2 rounded-md font-medium text-sm gap-2 transition"
+        >
+          <i class="fas fa-download"></i> Resume
+        </a>
+      </div>
+    </section>
+
+<!-- About Section -->
+<section id="about" class="px-6 md:px-20 py-20 md:min-h-screen scroll-mt-32">
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-start">
+
+    <!-- LEFT: About Text -->
+    <div>
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">About Me</h2>
+
+      <p class="text-gray-700 leading-relaxed mb-6">
+        I got introduced to programming during my junior secondary school days after seeing what my older brother was building on his computer. What started as simple curiosity quickly turned into genuine interest and excitement for creating things with code.
+      </p>
+
+      <p class="text-gray-700 leading-relaxed mb-6">
+        I began with HTML and CSS, building small projects and learning how websites come together. Soon after, I moved into JavaScript where development became more interactive and engaging. As my skills grew, I expanded into Node.js, Express, and EJS, learning how frontend and backend systems connect to form complete applications.
+      </p>
+
+      <p class="text-gray-700 leading-relaxed mb-6">
+        I'm continuously improving by building projects and exploring new concepts. Frontend development is what I enjoy the most — bringing ideas to life through clean, responsive interfaces and creating experiences that feel smooth and natural to use.
+      </p>
+
+      <p class="text-gray-700 leading-relaxed">
+        Outside coding, I enjoy gaming, watching movies, exploring tech trends, and working on creative skills like graphic design and video editing. Staying curious and learning new things keeps helping me grow both as a developer and a problem solver.
+      </p>
+    </div>
+
+    <!-- Skills Section -->
+<div id="skills" class="px-6 md:px-20 py-20 md:min-h-screen scroll-mt-32">
+
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Title -->
+    <h2 class="text-3xl font-bold text-gray-900 mb-14">
+      Skills
+    </h2>
+
+    <!-- Frontend -->
+    <div class="mb-12">
+      <h3 class="flex items-center gap-3 text-lg font-semibold text-gray-900 mb-6">
+        <i class="fa-solid fa-code text-blue-600"></i>
+        Frontend
+      </h3>
+
+      <ul class="grid grid-cols-2 gap-y-3 text-gray-700">
+        <li>HTML5</li>
+        <li>Tailwind CSS</li>
+        <li>CSS3</li>
+        <li>Responsive Design</li>
+        <li>JavaScript (ES6+)</li>
+        <li>UI/UX Principles</li>
+      </ul>
+    </div>
+
+    <!-- Backend -->
+    <div class="mb-12">
+      <h3 class="flex items-center gap-3 text-lg font-semibold text-gray-900 mb-6">
+        <i class="fa-solid fa-server text-blue-600"></i>
+        Backend
+      </h3>
+
+      <ul class="grid grid-cols-2 gap-y-3 text-gray-700">
+        <li>Node.js</li>
+        <li>REST APIs</li>
+        <li>Express.js</li>
+        <li>Authentication</li>
+        <li>EJS</li>
+        <li>Server Architecture</li>
+      </ul>
+    </div>
+
+    <!-- Tools -->
+    <div>
+      <h3 class="flex items-center gap-3 text-lg font-semibold text-gray-900 mb-6">
+        <i class="fa-solid fa-screwdriver-wrench text-blue-600"></i>
+        Tools
+      </h3>
+
+      <ul class="grid grid-cols-2 gap-y-3 text-gray-700">
+        <li>Git</li>
+        <li>Vercel</li>
+        <li>GitHub</li>
+        <li>Chrome DevTools</li>
+        <li>VS Code</li>
+        <li>Postman</li>
+        <li>Figma (Basics)</li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+
+    <!-- Projects Section -->
+
+<section
+  id="projects"
+  class="relative px-6 md:px-20 py-24 md:min-h-screen overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50"
+>
+
+  <!-- Background glow -->
+  <div class="absolute top-0 left-0 w-96 h-96 bg-blue-200 opacity-30 blur-3xl rounded-full -z-10"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 opacity-30 blur-3xl rounded-full -z-10"></div>
+
+  <div class="max-w-6xl mx-auto space-y-20">
+
+    <h2 class="text-3xl font-bold text-gray-900 mb-14">
+      Selected Projects
+    </h2>
+
+    <!-- Project Item -->
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-10 bg-white/70 backdrop-blur-lg p-6 rounded-2xl shadow-sm hover:shadow-xl transition">
+      
+      <!-- Text Content -->
+      <div class="md:w-1/2 space-y-3">
+        <span class="text-sm text-blue-600 font-medium uppercase">Web Application</span>
+        <h3 class="text-2xl font-semibold">Weather App</h3>
+        <p class="text-gray-600">
+          Built using HTML, CSS, and JavaScript with API integration to fetch real-time weather data. Provides current weather, forecasts, and responsive UI for a smooth experience.
+        </p>
+        <p class="text-gray-500 text-sm">
+          Languages/Tech: <span class="font-medium">HTML, CSS, JS</span>
+        </p>
+
+        <!-- Collapsible Case Study -->
+        <details class="mt-2 text-sm text-gray-700">
+          <summary class="cursor-pointer font-medium hover:text-blue-600">Case Study</summary>
+          <p class="mt-2">
+            This project focuses on teaching me how to fetch data from external APIs and display it dynamically. I worked on optimizing the UI for mobile and desktop, and learned to handle asynchronous requests effectively.
+          </p>
+        </details>
+
+        <!-- Live Demo -->
+        <a href="https://weatherly-rouge-mu.vercel.app/weather"
+           target="_blank"
+           class="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition">
+          Live Demo →
+        </a>
+      </div>
+
+      <!-- Image -->
+      <div class="md:w-1/2">
+        <img src="/images/weatherly.png" class="rounded-xl shadow-lg object-cover w-full h-64 md:h-80" />
+      </div>
+
+    </div>
+
+    <!-- Repeat Project Item -->
+    <div class="flex flex-col items-center md:items-start gap-10 bg-white/70 backdrop-blur-lg p-6 rounded-2xl shadow-sm hover:shadow-xl transition md:flex-row-reverse">
+      
+      <div class="md:w-1/2 space-y-3">
+        <span class="text-sm text-blue-600 font-medium uppercase">Web Application</span>
+        <h3 class="text-2xl font-semibold">Logistics Management Website</h3>
+        <p class="text-gray-600">
+          A full-stack logistics platform built with Node.js, Express, and EJS. Tracks shipments, manages deliveries, and provides a fast, responsive user experience.
+        </p>
+        <p class="text-gray-500 text-sm">
+          Languages/Tech: <span class="font-medium">Node.js, Express, EJS, JS, HTML, CSS</span>
+        </p>
+
+        <details class="mt-2 text-sm text-gray-700">
+          <summary class="cursor-pointer font-medium hover:text-blue-600">Case Study</summary>
+          <p class="mt-2">
+            I focused on creating a dynamic backend that interacts smoothly with the frontend, handling forms, routes, and data rendering efficiently. Learned a lot about structuring full-stack apps and optimizing performance.
+          </p>
+        </details>
+
+        <a href="https://dgcc-tech-logistics.vercel.app/"
+           target="_blank"
+           class="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition">
+          Live Demo →
+        </a>
+      </div>
+
+      <div class="md:w-1/2">
+        <img src="/images/logistics.png" class="rounded-xl shadow-lg object-cover w-full h-64 md:h-80" />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+    <!-- Skills Section -->
+<section
+  id="experience"
+  class="relative px-6 md:px-20 py-24 bg-gradient-to-br from-white via-blue-50 to-purple-50"
+>
+
+  <!-- Background glow -->
+  <div class="absolute top-0 left-0 w-96 h-96 bg-blue-200 opacity-20 blur-3xl rounded-full -z-10"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 opacity-20 blur-3xl rounded-full -z-10"></div>
+
+  <div class="max-w-6xl mx-auto space-y-14">
+
+    <h2 class="text-3xl font-bold text-gray-900 mb-10">
+      Experience & Education
+    </h2>
+
+    <!-- Experience Item -->
+    <div class="flex flex-col md:flex-row gap-8 items-start bg-white/70 backdrop-blur-lg p-6 rounded-2xl shadow-sm hover:shadow-xl transition">
+      
+      <!-- Text -->
+      <div class="md:w-1/2 space-y-3">
+        <span class="text-sm text-blue-600 font-medium uppercase">Education & Learning</span>
+   <h3 class="text-2xl font-semibold">DGCC Tech Diploma Program</h3>
+<p class="text-gray-600">
+  Currently pursuing a diploma in web development under DGCC Tech, where I've gained hands-on experience building projects and mastering practical skills. Learned HTML, CSS, JavaScript, Node.js, Express, and EJS while working on real-world applications and exercises.
+</p>
+<p class="text-gray-500 text-sm">
+  Key Learning: <span class="font-medium">Full-stack development, responsive design, server-side rendering with EJS, and project-based problem solving.</span>
+</p>
+
+
+        <p class="text-gray-500 text-sm">
+          Key Learning: <span class="font-medium">Frontend & Backend development, API integration, responsive design, and project-based learning.</span>
+        </p>
+
+        <!-- Collapsible case study -->
+        <details class="mt-2 text-sm text-gray-700">
+          <summary class="cursor-pointer font-medium hover:text-blue-600">Case Study</summary>
+          <p class="mt-2">
+            During my studies, I've created several projects such as a Weather App and a Logistics Management Website. These projects helped me understand full-stack development concepts, learn server-side rendering with EJS, and practice connecting frontends with backend logic.
+          </p>
+        </details>
+      </div>
+
+      <!-- Image -->
+      <div class="w-full md:w-1/2">
+        <img src="/images/education_2.jpg" class="rounded-xl shadow-lg object-cover w-full h-64 md:h-80" />
+      </div>
+
+    </div>
+
+    <div class="flex flex-col  gap-8 items-start bg-white/70 backdrop-blur-lg p-6 rounded-2xl shadow-sm hover:shadow-xl transition md:flex-row-reverse">
+      
+      <div class="md:w-1/2 space-y-3">
+        <span class="text-sm text-blue-600 font-medium uppercase">Learning Milestone</span>
+        <h3 class="text-2xl font-semibold">Junior Secondary Programming</h3>
+        <p class="text-gray-600">
+          First exposure to programming in junior secondary school by following my brother’s projects. Started with HTML and CSS, creating small projects that sparked my interest in web development.
+        </p>
+
+        <p class="text-gray-500 text-sm">
+          Key Learning: <span class="font-medium">Basic web structure, styling, and foundational coding logic.</span>
+        </p>
+
+        <details class="mt-2 text-sm text-gray-700">
+          <summary class="cursor-pointer font-medium hover:text-blue-600">Case Study</summary>
+          <p class="mt-2">
+            These early projects were simple but taught me problem-solving, patience, and how to learn independently — skills that continue to guide my development journey today.
+          </p>
+        </details>
+      </div>
+
+      <div class="w-full md:w-1/2">
+        <img src="/images/education.jpg" class="rounded-xl shadow-lg object-cover w-full h-64 md:h-80" />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+<section
+  id="contact"
+  class="relative px-6 md:px-20 py-24 bg-gradient-to-br from-white via-blue-50 to-purple-50"
+>
+
+  <!-- Background glow -->
+  <div class="absolute top-0 left-0 w-96 h-96 bg-blue-200 opacity-20 blur-3xl rounded-full -z-10"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 opacity-20 blur-3xl rounded-full -z-10"></div>
+
+  <div class="max-w-4xl mx-auto text-left space-y-6 md:text-center">
+
+    <!-- Labels / Headings -->
+    <span class="text-sm text-blue-600 font-medium uppercase">GET IN TOUCH</span>
+    <h2 class="text-4xl font-bold text-gray-900">Let's build something</h2>
+    <p class="text-gray-500 text-xl">impactful together.</p>
+
+    <!-- Description -->
+    <p class="text-gray-600 max-w-2xl mx-auto mt-4">
+      I'm always open to discussing new projects, collaborations, or opportunities where technology can make a real difference.
+    </p>
+
+    <!-- Start a Conversation Button -->
+    <a href="mailto:peterbamidele629@gmail.com"
+       class="mt-6 inline-block px-6 py-3 bg-black text-white font-medium rounded-lg shadow-lg hover:bg-gray-800 transition">
+      Start a Conversation →
+    </a>
+
+  </div>
+
+</section>
+
+    <!-- Mouse trail circle -->
+    <div
+      id="cursor"
+      class="pointer-events-none fixed z-50 w-4 h-4 bg-blue-500 bg-opacity-40 rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-all duration-100 ease-out"
+    ></div>
+
+    <!-- Footer -->
+    <footer
+      class="px-6 md:px-20 py-8 bg-gray-100 text-gray-600 text-sm text-center"
+    >
+      &copy; <%= new Date().getFullYear() %> Peter Bamidele. All rights reserved.
+    </footer>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Mobile Menu Script -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      const icon = document.getElementById("menu-icon");
+      const links = document.querySelectorAll("#mobile-menu a");
+
+      let menuOpen = false;
+
+      btn.addEventListener("click", () => {
+        menuOpen = !menuOpen;
+
+        if (menuOpen) {
+          menu.style.transform = "translateX(0)";
+          icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>`;
+        } else {
+          menu.style.transform = "translateX(-100%)";
+          icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>`;
+        }
+      });
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          menuOpen = false;
+          menu.style.transform = "translateX(-100%)";
+
+          // Reset hamburger icon
+          icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M4 6h16M4 12h16M4 18h16"></path>`;
+        });
+      });
+
+      //mouser cursor
+      const cursor = document.getElementById("cursor");
+
+      document.addEventListener("mousemove", (e) => {
+        const { clientX: x, clientY: y } = e;
+
+        // Move the circle
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+      });
+
+    </script>
+  </body>
+</html>
